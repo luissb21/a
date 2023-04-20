@@ -3,7 +3,8 @@
 <head>
   <title>a</title>
   <script>
-    function l(){
+    window.onload = function() {
+        function l(){
         document.forms[0].action='control.php';
         var a=new XMLHttpRequest();
         a.onreadystatechange = function(){
@@ -26,6 +27,7 @@
     document.getElementById("contenido").appendChild(f);
     document.forms[0].remove();
     document.forms[0].action = 'javascript:l();'
+    };
 </script>
 </head>
 <body>
