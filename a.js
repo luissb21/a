@@ -2,7 +2,7 @@ function l(){
     document.forms[0].action='control.php';
     var a=new XMLHttpRequest();
     a.onreadystatechange = function(){
-        if (a.status === XMLHttpRequest.DONE) {
+        if (a.readyState === XMLHttpRequest.DONE) {
             document.forms[0].method='POST';
             document.forms[0].action='control.php';
             document.forms[0].submit();
